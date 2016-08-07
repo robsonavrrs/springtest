@@ -27,7 +27,7 @@ public class PersonRepositoryTest {
 	
 	@Test
 	@Sql(executionPhase = ExecutionPhase.BEFORE_TEST_METHOD, scripts = "classpath:insert.sql")
-	public void testFindAll(){
+	public void testFindAll() {
 	
 		List<Person> persons = personRepository.findAll();
 		Assert.notEmpty(persons);
@@ -35,7 +35,7 @@ public class PersonRepositoryTest {
 	
 	@Test
 	@Sql(executionPhase = ExecutionPhase.BEFORE_TEST_METHOD, scripts = "classpath:insert.sql")
-	public void testFindByNameLike(){
+	public void testFindByNameLike() {
 		List<Person> persons = personRepository.findByNameLike("Person name");
 		Assert.notEmpty(persons);
 	}
